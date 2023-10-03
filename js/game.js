@@ -50,6 +50,7 @@ function playTicket(ticket_id) {
 function bonusTicket(ticket_id) {
     let bonus_ticket = document.getElementById("ticket_" + ticket_id);
     bonus_ticket.classList.add("ticket_bonus");
+    bonus_ticket.classList.add("animate__flip");
 }
 
 function missTicket(ticket_id) {
@@ -61,6 +62,7 @@ function missTicket(ticket_id) {
 function endGame(ticket_id) {
     let ticket_win = document.getElementById("ticket_" + ticket_id);
     ticket_win.classList.add("ticket_win");
+    ticket_win.classList.add("animate__flip");
     // Wait 5 seconds
     setTimeout(displayEndMenu, 3000);
 }
@@ -84,12 +86,11 @@ function startGame() {
 }
 
 function addBonus() {
-
     let bonus_input = document.getElementById("bonus_input");
 
     if(bonus_input.value == "") return;
-    if(win_input.value > 100) return;
-    if(win_input.value < 1) return;
+    if(bonus_input.value > 100) return;
+    if(bonus_input.value < 1) return;
 
     let bonus_value = bonus_input.value;
     bonus_tickets.push(bonus_value-1);
