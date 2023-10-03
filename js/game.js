@@ -76,11 +76,13 @@ function displayEndMenu() {
 function startGame() {
 
     let win_input = document.getElementById("win_input");
-    if(win_input.value == "") return;
-    if(win_input.value > 100) return;
-    if(win_input.value < 1) return;
+    if(win_ticket_id == -1) {
+        if(win_input.value == "") return;
+        if(win_input.value > 100) return;
+        if(win_input.value < 1) return;
 
-    win_ticket_id = win_input.value-1;
+        win_ticket_id = win_input.value-1;
+    }
 
     undisplayStartMenu();
 }
@@ -123,4 +125,15 @@ function removeBonus(bonus_id) {
     bonus_tickets.splice(bonus_id-1, 1);
     let bonus = document.getElementById("bonus_" + bonus_id);
     bonus.remove();
+}
+
+function chooseRandomly() {
+    win_ticket_id = Math.floor(Math.random()*100);
+    bonus_tickets = [];
+    let bonus_count = 1+Math.floor(Math.random()*10);
+    for(let i = 0; i < bonus_count; i++) {
+        bonus_tickets.push(Math.floor(Math.random()*100));
+    }
+
+    startGame();
 }
