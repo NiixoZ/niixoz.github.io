@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>VIP Games</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <script src='js/game.js'></script>
+</head>
+<body>
+    <div id="start_menu">
+        <img src="img/vipgames.png" alt="vipgames">
+
+        <span class="input_content">
+            <span class="label">Numéro Gagnant</span>
+            <input id="win_input" type="number" min="1" max="100">
+        </span>
+
+        <span class="input_content">
+            <span class="label">Numéros Bonus</span>
+            <div class="row gap-12">
+                <input id="bonus_input" type="number" min="1" max="100">
+                <span class="button add_bonus" onclick="addBonus()">+</span>
+            </div>
+            <div id="bonuses" class="col gap-8">
+            </div>
+
+        </span>
+
+        <div id="start_menu_buttons">
+            <span class="button start pl-48 pr-48" onclick="startGame()">Start</span>
+        </div>
+    </div>
+
+    <div id="game_menu">
+        <img src="img/vipgames.png" alt="vipgames">
+        <div id="tickets_pack">
+            <div class="ticket" id="ticket_0" onclick="playTicket(0)">1</div>
+            <div class="ticket" id="ticket_1" onclick="playTicket(1)">2</div>
+            <div class="ticket" id="ticket_2" onclick="playTicket(2)">3</div>
+            <div class="ticket" id="ticket_3" onclick="playTicket(3)">4</div>
+            <div class="ticket" id="ticket_4" onclick="playTicket(4)">5</div>
+            <div class="ticket" id="ticket_5" onclick="playTicket(5)">6</div>
+            <div class="ticket" id="ticket_6" onclick="playTicket(6)">7</div>
+            <div class="ticket" id="ticket_7" onclick="playTicket(7)">8</div>
+            <div class="ticket" id="ticket_8" onclick="playTicket(8)">9</div>
+            <div class="ticket" id="ticket_9" onclick="playTicket(9)">10</div>
+            <div class="ticket" id="ticket_10" onclick="playTicket(10)">11</div>
+            <div class="ticket" id="ticket_11" onclick="playTicket(11)">12</div>
+            <div class="ticket" id="ticket_12" onclick="playTicket(12)">13</div>
+            <div class="ticket" id="ticket_13" onclick="playTicket(13)">14</div>
+            <div class="ticket" id="ticket_14" onclick="playTicket(14)">15</div>
+            <div class="ticket" id="ticket_15" onclick="playTicket(15)">16</div>
+            <div class="ticket" id="ticket_16" onclick="playTicket(16)">17</div>
+            <div class="ticket" id="ticket_17" onclick="playTicket(17)">18</div>
+            <div class="ticket" id="ticket_18" onclick="playTicket(18)">19</div>
+            <div class="ticket" id="ticket_19" onclick="playTicket(19)">20</div>
+            <div class="ticket" id="ticket_20" onclick="playTicket(20)">21</div>
+            <div class="ticket" id="ticket_21" onclick="playTicket(21)">22</div>
+            <div class="ticket" id="ticket_22" onclick="playTicket(22)">23</div>
+            <div class="ticket" id="ticket_23" onclick="playTicket(23)">24</div>
+            <div class="ticket" id="ticket_24" onclick="playTicket(24)">25</div>
+            <div class="ticket" id="ticket_25" onclick="playTicket(25)">26</div>
+            <div class="ticket" id="ticket_26" onclick="playTicket(26)">27</div>
+            <div class="ticket" id="ticket_27" onclick="playTicket(27)">28</div>
+            <div class="ticket" id="ticket_28" onclick="playTicket(28)">29</div>
+            <div class="ticket" id="ticket_29" onclick="playTicket(29)">30</div>
+            <div class="ticket" id="ticket_30" onclick="playTicket(30)">31</div>
+            <div class="ticket" id="ticket_31" onclick="playTicket(31)">32</div>
+            <div class="ticket" id="ticket_32" onclick="playTicket(32)">33</div>
+            <div class="ticket" id="ticket_33" onclick="playTicket(33)">34</div>
+            <div class="ticket" id="ticket_34" onclick="playTicket(34)">35</div>
+            <div class="ticket" id="ticket_35" onclick="playTicket(35)">36</div>
+            <div class="ticket" id="ticket_36" onclick="playTicket(36)">37</div>
+            <div class="ticket" id="ticket_37" onclick="playTicket(37)">38</div>
+            <div class="ticket" id="ticket_38" onclick="playTicket(38)">39</div>
+            <div class="ticket" id="ticket_39" onclick="playTicket(39)">40</div>
+            <div class="ticket" id="ticket_40" onclick="playTicket(40)">41</div>
+            <div class="ticket" id="ticket_41" onclick="playTicket(41)">42</div>
+            <div class="ticket" id="ticket_42" onclick="playTicket(42)">43</div>
+            <div class="ticket" id="ticket_43" onclick="playTicket(43)">44</div>
+            <div class="ticket" id="ticket_44" onclick="playTicket(44)">45</div>
+            <div class="ticket" id="ticket_45" onclick="playTicket(45)">46</div>
+            <div class="ticket" id="ticket_46" onclick="playTicket(46)">47</div>
+            <div class="ticket" id="ticket_47" onclick="playTicket(47)">48</div>
+            <div class="ticket" id="ticket_48" onclick="playTicket(48)">49</div>
+            <div class="ticket" id="ticket_49" onclick="playTicket(49)">50</div>
+            <div class="ticket" id="ticket_50" onclick="playTicket(50)">51</div>
+            <div class="ticket" id="ticket_51" onclick="playTicket(51)">52</div>
+            <div class="ticket" id="ticket_52" onclick="playTicket(52)">53</div>
+            <div class="ticket" id="ticket_53" onclick="playTicket(53)">54</div>
+            <div class="ticket" id="ticket_54" onclick="playTicket(54)">55</div>
+            <div class="ticket" id="ticket_55" onclick="playTicket(55)">56</div>
+            <div class="ticket" id="ticket_56" onclick="playTicket(56)">57</div>
+            <div class="ticket" id="ticket_57" onclick="playTicket(57)">58</div>
+            <div class="ticket" id="ticket_58" onclick="playTicket(58)">59</div>
+            <div class="ticket" id="ticket_59" onclick="playTicket(59)">60</div>
+            <div class="ticket" id="ticket_60" onclick="playTicket(60)">61</div>
+            <div class="ticket" id="ticket_61" onclick="playTicket(61)">62</div>
+            <div class="ticket" id="ticket_62" onclick="playTicket(62)">63</div>
+            <div class="ticket" id="ticket_63" onclick="playTicket(63)">64</div>
+            <div class="ticket" id="ticket_64" onclick="playTicket(64)">65</div>
+            <div class="ticket" id="ticket_65" onclick="playTicket(65)">66</div>
+            <div class="ticket" id="ticket_66" onclick="playTicket(66)">67</div>
+            <div class="ticket" id="ticket_67" onclick="playTicket(67)">68</div>
+            <div class="ticket" id="ticket_68" onclick="playTicket(68)">69</div>
+            <div class="ticket" id="ticket_69" onclick="playTicket(69)">70</div>
+            <div class="ticket" id="ticket_70" onclick="playTicket(70)">71</div>
+            <div class="ticket" id="ticket_71" onclick="playTicket(71)">72</div>
+            <div class="ticket" id="ticket_72" onclick="playTicket(72)">73</div>
+            <div class="ticket" id="ticket_73" onclick="playTicket(73)">74</div>
+            <div class="ticket" id="ticket_74" onclick="playTicket(74)">75</div>
+            <div class="ticket" id="ticket_75" onclick="playTicket(75)">76</div>
+            <div class="ticket" id="ticket_76" onclick="playTicket(76)">77</div>
+            <div class="ticket" id="ticket_77" onclick="playTicket(77)">78</div>
+            <div class="ticket" id="ticket_78" onclick="playTicket(78)">79</div>
+            <div class="ticket" id="ticket_79" onclick="playTicket(79)">80</div>
+            <div class="ticket" id="ticket_80" onclick="playTicket(80)">81</div>
+            <div class="ticket" id="ticket_81" onclick="playTicket(81)">82</div>
+            <div class="ticket" id="ticket_82" onclick="playTicket(82)">83</div>
+            <div class="ticket" id="ticket_83" onclick="playTicket(83)">84</div>
+            <div class="ticket" id="ticket_84" onclick="playTicket(84)">85</div>
+            <div class="ticket" id="ticket_85" onclick="playTicket(85)">86</div>
+            <div class="ticket" id="ticket_86" onclick="playTicket(86)">87</div>
+            <div class="ticket" id="ticket_87" onclick="playTicket(87)">88</div>
+            <div class="ticket" id="ticket_88" onclick="playTicket(88)">89</div>
+            <div class="ticket" id="ticket_89" onclick="playTicket(89)">90</div>
+            <div class="ticket" id="ticket_90" onclick="playTicket(90)">91</div>
+            <div class="ticket" id="ticket_91" onclick="playTicket(91)">92</div>
+            <div class="ticket" id="ticket_92" onclick="playTicket(92)">93</div>
+            <div class="ticket" id="ticket_93" onclick="playTicket(93)">94</div>
+            <div class="ticket" id="ticket_94" onclick="playTicket(94)">95</div>
+            <div class="ticket" id="ticket_95" onclick="playTicket(95)">96</div>
+            <div class="ticket" id="ticket_96" onclick="playTicket(96)">97</div>
+            <div class="ticket" id="ticket_97" onclick="playTicket(97)">98</div>
+            <div class="ticket" id="ticket_98" onclick="playTicket(98)">99</div>
+            <div class="ticket" id="ticket_99" onclick="playTicket(99)">100</div>            
+        </div>
+    </div>
+</body>
+</html>
